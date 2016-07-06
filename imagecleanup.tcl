@@ -8,7 +8,7 @@
 # Passed in at the cli, image we want to check for
 set standard [lindex $argv 0]
 
-set standardlen [string length standard]
+set standardlen [string length $standard]
 
 # make sure parameter was passed above
 if {$standardlen == 0} { 
