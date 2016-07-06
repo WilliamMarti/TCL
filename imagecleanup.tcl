@@ -6,7 +6,15 @@
 #
 
 # Passed in at the cli, image we want to check for
-set standard $argv 0
+set standard [lindex $argv 0]
+
+set standardlen [string length standard]
+
+# make sure parameter was passed above
+if {$standardlen == 0} { 
+	puts "No Argument Given"
+	return
+} 
 
 # grab all image files '.bin'
 set dir [exec {dir flash: | incl .bin}]
